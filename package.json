@@ -1,0 +1,43 @@
+{
+  "name": "create-copilot-workspace",
+  "version": "0.1.0",
+  "description": "npx CLI tool that scaffolds GitHub Copilot configuration files into any existing project",
+  "main": "dist/index.js",
+  "bin": {
+    "create-copilot-workspace": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node bin/cli.js",
+    "lint": "eslint src --ext .ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "github-copilot",
+    "copilot",
+    "cli",
+    "scaffold",
+    "workspace"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin/",
+    "dist/",
+    "templates/"
+  ],
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  }
+}
