@@ -1,0 +1,28 @@
+{
+  "name": "create-copilot-workspace",
+  "version": "0.1.0",
+  "description": "A CLI tool to bootstrap GitHub Copilot projects",
+  "license": "MIT",
+  "bin": {
+    "create-copilot-workspace": "bin/cli.js"
+  },
+  "main": "dist/index.js",
+  "files": ["bin", "dist", "templates"],
+  "engines": { "node": ">=16" },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --outDir dist",
+    "dev": "tsup src/index.ts --format cjs --watch",
+    "start": "node bin/cli.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "commander": "^11.0.0",
+    "mustache": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tsup": "^8.0.0"
+  }
+}
